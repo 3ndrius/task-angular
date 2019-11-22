@@ -1,0 +1,19 @@
+<p>add-post works!</p>
+<div class="container">
+  <div class="alert-info">
+{{info}}
+  </div>
+  <form>
+
+    <div class="form-group">
+      <label for="exampleInputText">title</label>
+      <input type="text" class="form-control" [(ngModel)]="title"  name="title" [ngModelOptions]="{standalone: true}" id="exampleInputText" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputText">Content</label>
+      <input type="text" class="form-control"  [(ngModel)]="body" name="body" id="exampleInputText" [ngModelOptions]="{standalone: true}" placeholder="Content" >
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addPost()">Add post</button>
+  </form>
+  <a routerLink="/posts" routerLinkActive="active">Back</a>
+</div>

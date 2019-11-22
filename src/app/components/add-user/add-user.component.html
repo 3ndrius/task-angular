@@ -1,0 +1,27 @@
+<p>add-user works!</p>
+
+
+
+<div class="container">
+  <div class="alert-info">
+{{info}}
+  </div>
+  <form>
+
+    <div class="form-group">
+      <label for="exampleInputText">FirstName</label>
+      <input type="text" class="form-control" [(ngModel)]="firstName"  name="firstName" [ngModelOptions]="{standalone: true}" id="exampleInputText" placeholder="FirstName">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputText">LastName</label>
+      <input type="text" class="form-control"  [(ngModel)]="lastName" name="lastName" id="exampleInputText" [ngModelOptions]="{standalone: true}" placeholder="LastName">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1"  [(ngModel)]="email" aria-describedby="emailHelp" [ngModelOptions]="{standalone: true}" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addUser()">Add user</button>
+  </form>
+
+</div>

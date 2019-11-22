@@ -1,0 +1,15 @@
+<p>users works!</p>
+<a routerLink="/" routerLinkActive="active">Back</a>
+<button class="btn btn-primary" routerLink="/users/add">Add user</button>
+<ul>
+
+  <li *ngFor="let user of allUser" >
+   <a routerLink="/users/{{user.id}}" (click)="onSelect(user)">
+    {{user.first_name}}
+    {{user.last_name}}
+    {{user.email}}
+   </a>
+   <button class="btn btn-danger" (click)="deleteUser(user)">Delete user</button>
+   <button class="btn btn-secondary" routerLink="/users/edit/{{user.id}}" >Update user</button>
+  </li>
+</ul>

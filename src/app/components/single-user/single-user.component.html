@@ -1,0 +1,16 @@
+<p>single-user works!</p>
+
+<div class="container">
+  <h2>{{singleUser.first_name}}</h2>
+<h2>{{singleUser.last_name}}</h2>
+<h2>{{singleUser.email}}</h2>
+
+<button class="btn btn-primary" (click)="showUserPosts()">Show user posts</button>
+<h2>Posts by user</h2>
+<ul>
+  <li *ngFor="let post of posts">
+    <a routerLink="/posts/{{post.id}}" (click)="onSelect(post)"><h3>{{post.title}}</h3></a>
+    <p>{{post.body}}</p>
+  </li>
+</ul>
+</div>
