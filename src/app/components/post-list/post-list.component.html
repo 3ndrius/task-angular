@@ -1,15 +1,22 @@
-<p>post-list works!</p>
-<a routerLink="/" routerLinkActive="active">Back</a>
-<button class="btn btn-primary" routerLink="/posts/add">Add post</button>
-<li class="container">
-   <ul>
-    <li  *ngFor="let post of allPosts">
-      <a routerLink="/posts/{{post.id}}" (click)="onSelect(post)"><h3> {{post.title}}</h3> </a>
-     <p> {{post.body }} </p>
-     <button class="btn btn-danger" (click)="deletePost(post)">Delete post</button>
-     <button class="btn btn-secondary" routerLink="/posts/edit/{{post.id}}" >Update post</button>
-    </li>
-
-   </ul>
-
-
+<h2>Posts list</h2>
+<hr />
+<div class="row">
+  <div class="col-md-12">
+    <a routerLink="/" routerLinkActive="active">Back</a>
+    <button class="btn btn-primary ml-2" routerLink="/posts/add">Add post</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12" *ngFor="let post of allPosts">
+    <a routerLink="/posts/{{ post.id }}" (click)="onSelect(post)"
+      ><h3>{{ post.title }}</h3>
+    </a>
+    <p>{{ post.body }}</p>
+    <button class="btn btn-danger" (click)="deletePost(post)">
+      Delete post
+    </button>
+    <button class="btn btn-secondary" routerLink="/posts/edit/{{ post.id }}">
+      Update post
+    </button>
+  </div>
+</div>
