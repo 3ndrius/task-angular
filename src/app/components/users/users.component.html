@@ -1,6 +1,13 @@
-<p>users works!</p>
-<a routerLink="/" routerLinkActive="active">Back</a>
-<button class="btn btn-primary" routerLink="/users/add">Add user</button>
+<h2>Users list</h2>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <a routerLink="/" routerLinkActive="active">Back</a>
+<button class="btn btn-primary ml-2" routerLink="/users/add">Add user</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
 <ul>
 
   <li *ngFor="let user of allUser" >
@@ -9,7 +16,9 @@
     {{user.last_name}}
     {{user.email}}
    </a>
-   <button class="btn btn-danger" (click)="deleteUser(user)">Delete user</button>
+   <button class="btn btn-danger m-2" (click)="deleteUser(user)">Delete user</button>
    <button class="btn btn-secondary" routerLink="/users/edit/{{user.id}}" >Update user</button>
   </li>
 </ul>
+  </div>
+</div>
